@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import type { ReactNode } from "react";
+import TemplateRuntime from "./template-runtime";
 
 export const metadata: Metadata = {
   title: "Artistic - Creative Digital Agency HTML Template",
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <TemplateRuntime />
         {scripts.map((src) => (
           <Script key={src} src={src} strategy="afterInteractive" />
         ))}

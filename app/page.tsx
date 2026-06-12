@@ -1,7 +1,7 @@
 import { getHtmlBody } from "@/lib/html-pages";
 
-export default async function NotFound() {
-  const body = await getHtmlBody("404.html");
+export default async function HomePage() {
+  const body = await getHtmlBody("index.html");
 
   return <main dangerouslySetInnerHTML={{ __html: body }} />;
 }
